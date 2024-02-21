@@ -1,25 +1,26 @@
 "use client";
 import {
-  decrement,
-  increment,
-  incrementByAmount,
-   selectCounter,
-} from "@/redux/features/counter/counterSlice";
+  decrement2,
+  increment2,
+  incrementByAmount2,
+
+  selectCounter2,
+} from "@/redux/features/counter/counterSlice2";
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-function Counter() {
+function Counter2() {
   const [value, setValue] = useState(5);
 
-  const counter = useSelector(selectCounter);
+  const counter2 = useSelector(selectCounter2);
   const dispach = useDispatch();
   return (
     <div>
 
-        <h2>Counter is : {counter}</h2>
+        <h2>Counter2 is : {counter2}</h2>
     <div className="form-input">
-      <button onClick={() => dispach(increment())}>Increment + 1</button>
-      <button onClick={() => dispach(decrement())}>Decrement - 1</button>
+      <button onClick={() => dispach(increment2())}>Increment + 1</button>
+      <button onClick={() => dispach(decrement2())}>Decrement - 1</button>
       </div>
       <label htmlFor="amount">Amount:</label>
       <input
@@ -28,11 +29,11 @@ function Counter() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         />
-      <button onClick={() => dispach(incrementByAmount(+value))}>
+      <button onClick={() => dispach(incrementByAmount2(+value))}>
         increment By Amount
       </button>
         </div>
   );
 }
 
-export default Counter;
+export default Counter2;
