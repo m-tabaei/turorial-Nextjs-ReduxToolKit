@@ -2,6 +2,7 @@ import Counter from "@/components/Counter";
 import styles from "./page.module.css";
 import Number from "@/components/Number";
 import Counter2 from './../components/Counter2';
+import Users from "@/components/Users";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
     <Counter/>
     <Counter2/>
     <Number/>
+    <Users/>
     </main>
   );
 }
